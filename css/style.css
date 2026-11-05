@@ -44,7 +44,7 @@
   --border-card: 1px solid rgba(18, 59, 38, 0.15);
   --border-subtle: 1px solid rgba(18, 59, 38, 0.10);
 
-  --font-script: 'Great Vibes', 'Alex Brush', cursive;
+  --font-script: 'Alex Brush', 'Great Vibes', cursive;
   --font-serif-luxury: 'Playfair Display', Georgia, serif;
   --font-serif-classic: 'Cormorant Garamond', Garamond, Georgia, serif;
   --font-royal: 'Cinzel', 'Times New Roman', serif;
@@ -510,12 +510,19 @@ html[data-theme="dark"] .card-cordial-lead {
 
 .card-couples-title {
   font-family: var(--font-script);
-  font-size: clamp(2.3rem, 7vw, 3.2rem);
+  font-size: clamp(2.4rem, 7.5vw, 3.4rem);
   color: #8F6E28;
   font-weight: 400;
   line-height: 1.15;
   margin: 0;
   text-shadow: 0 1px 3px rgba(143, 110, 40, 0.15);
+}
+
+.card-couples-title .card-cap-initial {
+  font-size: 1.08em;
+  display: inline-block;
+  vertical-align: baseline;
+  letter-spacing: 0.02em;
 }
 
 html[data-theme="dark"] .card-couples-title {
@@ -1136,6 +1143,134 @@ html[data-theme="dark"] .carousel-autoplay-btn {
   border-radius: 3px;
   font-family: var(--font-royal);
   letter-spacing: 0.05em;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WALIMA CELEBRATION SHOWCASE (SIMPLIFIED & MEANINGFUL)
+   ───────────────────────────────────────────────────────────── */
+.walima-celebration-showcase {
+  background: var(--bg-card);
+  border: 1.5px solid rgba(197, 160, 89, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.celebration-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-royal);
+  font-size: clamp(0.82rem, 2.5vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold-dark);
+  margin-bottom: 18px;
+}
+
+html[data-theme="dark"] .celebration-time-badge {
+  color: var(--gold-primary);
+  background: rgba(197, 160, 89, 0.16);
+}
+
+.celebration-lead-message {
+  font-family: var(--font-serif-luxury);
+  font-size: clamp(0.96rem, 2.8vw, 1.1rem);
+  color: var(--forest-primary);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-style: italic;
+}
+
+html[data-theme="dark"] .celebration-lead-message {
+  color: var(--cream-soft);
+}
+
+.celebration-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 10px;
+  padding-top: 24px;
+  border-top: 1px dashed rgba(197, 160, 89, 0.35);
+}
+
+@media (max-width: 720px) {
+  .celebration-features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.celebration-feature-item {
+  background: rgba(247, 245, 239, 0.6);
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  border-radius: var(--radius-md);
+  padding: 20px 16px;
+  transition: var(--transition-smooth);
+}
+
+html[data-theme="dark"] .celebration-feature-item {
+  background: rgba(13, 30, 20, 0.7);
+  border-color: rgba(197, 160, 89, 0.3);
+}
+
+.celebration-feature-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.celebration-feature-icon {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.celebration-feature-title {
+  font-family: var(--font-serif-luxury);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--forest-primary);
+  margin-bottom: 6px;
+}
+
+html[data-theme="dark"] .celebration-feature-title {
+  color: var(--text-main);
+}
+
+.celebration-feature-desc {
+  font-size: 0.84rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.celebration-venue-note {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.celebration-venue-tag {
+  font-family: var(--font-royal);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--gold-dark);
+}
+
+html[data-theme="dark"] .celebration-venue-tag {
+  color: var(--gold-primary);
 }
 
 /* ─────────────────────────────────────────────────────────────

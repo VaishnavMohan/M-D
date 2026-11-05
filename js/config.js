@@ -16,7 +16,7 @@ const WEDDING_CONFIG = {
       shortName: "Mahshook",
       title: "The Groom",
       parents: "Mr Azeez and Mrs Thahira Azeez",
-      residence: "Kanhirangattl house, Kuttipuram road, Edappal",
+      residence: "Kanhirangattil house, Kuttipuram road, Edappal",
       phone: "+919846000000",
       formattedPhone: "Azeez & Thahira Family (Edappal)",
       invitationNote: "Cordially invites you to the Walima ceremony of our beloved son."
@@ -28,7 +28,7 @@ const WEDDING_CONFIG = {
       shortName: "Dilna",
       title: "The Bride",
       parents: "Mr Basheer and Mrs Laila Basheer",
-      residence: "Eechiyil house, purangu",
+      residence: "Eachiyil house, purangu",
       phone: "+919847000000",
       formattedPhone: "Basheer & Laila Family (Purangu)",
       invitationNote: "Together with families, seeking your prayers and presence on this blessed day."
@@ -91,7 +91,7 @@ const WEDDING_CONFIG = {
     prayer: "May Allah accept our union and make it a source of endless blessings for us all.",
     sharingHappiness: "Sharing the happiness Mishal & Minha",
     wishesLead: "With best Wishes :",
-    wishesNames: "Kanhirangattl & Eechiyil Families"
+    wishesNames: "Kanhirangattil & Eachiyil Families"
   },
 
   // Photos Gallery (Taj Mahal Photoshoot - 6 Photos)
@@ -100,7 +100,7 @@ const WEDDING_CONFIG = {
       id: 1,
       src: "assets/images/tajmahal/photo1_hero_flowing.jpg",
       title: "Eternal Symphony",
-      caption: "Dr. Mahshook & Dr. Dilna standing in grace before the majestic Taj Mahal as Dilna's white dress flows like a dream in the Agra breeze.",
+      caption: "Mahshook & Dilna standing in grace before the majestic Taj Mahal as Dilna's white dress flows like a dream in the Agra breeze.",
       aspect: "landscape"
     },
     {
@@ -121,7 +121,7 @@ const WEDDING_CONFIG = {
       id: 4,
       src: "assets/images/tajmahal/photo4_bride_serenade.jpg",
       title: "Golden Hour Serenity",
-      caption: "Dr. Dilna seated peacefully amidst the warm amber glow of sunset, watching the evening sun descend beside the Taj Mahal.",
+      caption: "Dilna seated peacefully amidst the warm amber glow of sunset, watching the evening sun descend beside the Taj Mahal.",
       aspect: "landscape"
     },
     {
@@ -135,7 +135,7 @@ const WEDDING_CONFIG = {
       id: 6,
       src: "assets/images/tajmahal/photo6_twirl_joy.jpg",
       title: "A Whirl of Joy",
-      caption: "Pure joy captured as Dr. Dilna twirls gracefully in her cascading gown with Dr. Mahshook smiling warmly beside her.",
+      caption: "Pure joy captured as Dilna twirls gracefully in her cascading gown with Mahshook smiling warmly beside her.",
       aspect: "landscape"
     }
   ],
