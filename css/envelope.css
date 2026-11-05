@@ -423,3 +423,40 @@ body:not(.envelope-opened) {
   50% { transform: scale(1.05) translateY(-10px); opacity: 0.8; }
   100% { transform: scale(0.9) translateY(40px); opacity: 0; }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   COMPACT MOBILE OPTIMIZATIONS (iPhone SE, Small Screens)
+   ───────────────────────────────────────────────────────────── */
+@media (max-height: 720px), (max-width: 380px) {
+  .thread-folio-card {
+    width: min(340px, 92vw);
+    padding: 20px 16px 18px;
+    border-radius: 20px;
+  }
+
+  .thread-monogram-circle {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+
+  .thread-monogram-text {
+    font-size: 1.4rem;
+  }
+
+  .thread-bismillah {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .thread-couple-names {
+    font-size: clamp(1.2rem, 4vw, 1.45rem);
+    margin: 4px 0;
+  }
+
+  .thread-untie-btn {
+    padding: 10px 22px;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+}

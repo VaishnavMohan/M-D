@@ -525,6 +525,17 @@ html[data-theme="dark"] .card-cordial-lead {
   letter-spacing: 0.02em;
 }
 
+.card-couples-title .card-cap-initial-n {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+  font-style: italic;
+  font-size: 1.08em;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: baseline;
+  letter-spacing: 0.02em;
+  margin-right: -0.02em;
+}
+
 html[data-theme="dark"] .card-couples-title {
   color: #E5C578;
 }
@@ -566,8 +577,33 @@ html[data-theme="dark"] .card-couples-subdetail {
 
 @media (max-width: 580px) {
   .card-tri-badge-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin: 18px auto 12px;
+  }
+
+  .card-badge-col {
+    padding: 10px 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  .badge-icon-wrap {
+    font-size: 1.15rem;
+    margin-bottom: 3px;
+  }
+
+  .badge-tag-text {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .badge-main-text {
+    font-size: clamp(0.85rem, 3.2vw, 1rem);
+  }
+
+  .badge-sub-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -1468,6 +1504,21 @@ html[data-theme="dark"] .venue-qr-label {
   justify-content: center;
 }
 
+@media (max-width: 580px) {
+  .venue-action-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .venue-action-buttons .btn-luxury {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────
    WARM WISHES & WHATSAPP DU'A
    ───────────────────────────────────────────────────────────── */
@@ -1591,13 +1642,13 @@ html[data-theme="dark"] .footer-signature a {
    ───────────────────────────────────────────────────────────── */
 .floating-controls-bar {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  right: calc(16px + env(safe-area-inset-right, 0px));
   display: flex;
   align-items: center;
   gap: 10px;
   z-index: 990;
-  background: rgba(14, 38, 25, 0.85);
+  background: rgba(14, 38, 25, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 8px 12px;
