@@ -77,9 +77,9 @@ const WEDDING_CONFIG = {
 
   // Audio Music Settings
   audio: {
-    src: "assets/audio/o_rangrez.mp3",
-    title: "O Rangrez (Mughal & Sufi Romance)",
-    defaultVolume: 0.75
+    src: "assets/audio/mera_hua.mp3",
+    title: "Mera Hua - Anmol Salh",
+    defaultVolume: 0.8
   },
 
   // Messages from the Invitation Card

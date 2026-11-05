@@ -1,7 +1,7 @@
 /**
  * ===================================================================
  * BACKGROUND AUDIO CONTROLLER (AUTO-PAUSES ON LEAVING / TAB SWITCH)
- * Features "O Rangrez" Sufi melody for the Taj Mahal theme
+ * Features "Mera Hua" by Anmol Salh for the Taj Mahal theme
  * ===================================================================
  */
 
@@ -25,7 +25,7 @@ class WeddingAudioManager {
       document.body.appendChild(this.audio);
     }
     
-    this.audio.src = this.config.src || 'assets/audio/o_rangrez.mp3';
+    this.audio.src = this.config.src || 'assets/audio/mera_hua.mp3';
     this.audio.loop = true;
     this.audio.volume = this.config.defaultVolume || 0.75;
     this.audio.preload = 'auto';
@@ -118,7 +118,8 @@ class WeddingAudioManager {
       if (window.showToast) window.showToast("🔇 Music Paused");
     } else {
       this.play();
-      if (window.showToast) window.showToast("🎵 Playing: O Rangrez");
+      const title = (this.config && this.config.title) ? this.config.title : "Mera Hua - Anmol Salh";
+      if (window.showToast) window.showToast(`🎵 Playing: ${title}`);
     }
   }
 
