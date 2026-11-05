@@ -136,7 +136,8 @@ function setupActionButtons() {
   // Share on WhatsApp
   if (shareWhatsappBtn) {
     shareWhatsappBtn.addEventListener('click', () => {
-      const shareUrl = window.location.href;
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const shareUrl = isLocal ? 'https://mahshookdilna.vercel.app/' : window.location.href;
       const shareText = encodeURIComponent(
         `✨ Wedding Invitation ✨\n\n` +
         `Mr. Azeez & Mrs. Thahira Azeez cordially invite you to the Walima ceremony of their son\n` +

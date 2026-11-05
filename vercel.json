@@ -4,6 +4,19 @@
   "trailingSlash": false,
   "headers": [
     {
+      "source": "/(thumb|og-image|preview|whatsapp-preview|wa-thumb)\\.(jpg|jpeg|png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
       "source": "/assets/(.*)",
       "headers": [
         {
