@@ -1,8 +1,9 @@
 /**
  * ===================================================================
  * WEDDING INVITATION CONFIGURATION
- * Mohammed Nadeer & Fathima Rinsi — Saturday, October 31, 2026
- * { 20 Jumada al-Awwal (Jumada I) 1448 AH }
+ * Dr. Mahshook Bin Azeez & Dr. Dilna Nasrin
+ * Walima Ceremony — Sunday, 6th December 2026
+ * The White Oak Castle, Moodal
  * ===================================================================
  */
 
@@ -10,116 +11,172 @@ const WEDDING_CONFIG = {
   // Couple Information
   couple: {
     groom: {
-      name: "Mohammed Nadeer",
-      fullName: "Mohammed Nadeer",
+      name: "Dr Mahshook Bin Azeez",
+      fullName: "Dr. Mahshook Bin Azeez",
+      shortName: "Mahshook",
       title: "The Groom",
-      parents: "Mr. Mohammed Basheer & Mrs. Shahanaz",
-      grandParents: "Late Hamza Haji & Late Abdul Kader",
-      residence: "Pulaparambil (H), Chekanoor, Malappuram",
+      parents: "Mr Azeez and Mrs Thahira Azeez",
+      residence: "Kanhirangattl house, Kuttipuram road, Edappal",
       phone: "+919846000000",
-      formattedPhone: "Pulaparambil Family",
-      invitationNote: "With warm hearts and sincere prayers, we cordially invite you with family to bless our sacred union."
+      formattedPhone: "Azeez & Thahira Family (Edappal)",
+      invitationNote: "Cordially invites you to the Walima ceremony of our beloved son."
     },
 
     bride: {
-      name: "Fathima Rinsi",
-      fullName: "Fathima Rinsi",
+      name: "Dr Dilna Nasrin",
+      fullName: "Dr. Dilna Nasrin",
+      shortName: "Dilna",
       title: "The Bride",
-      parents: "Mr. Subair & Mrs. Soubanath Subair",
-      residence: "Chandaparambil (H), Edappal",
+      parents: "Mr Basheer and Mrs Laila Basheer",
+      residence: "Eechiyil house, purangu",
       phone: "+919847000000",
-      formattedPhone: "Chandaparambil Family",
-      invitationNote: "With love, joy, and gratitude, we invite you to celebrate this blessed milestone in our lives."
+      formattedPhone: "Basheer & Laila Family (Purangu)",
+      invitationNote: "Together with families, seeking your prayers and presence on this blessed day."
     },
-    monogram: "N / R",
-    monogramShort: "N/R",
-    hashtag: "#NadeerWedsRinsi"
+
+    monogram: "M / D",
+    monogramShort: "M & D",
+    hashtag: "#MahshookWedsDilna",
+    sharingHappiness: "Mishal & Minha"
   },
 
   // Event Date & Time
   event: {
-    targetDate: "2026-10-31T16:00:00",
-    dayOfWeek: "SATURDAY",
-    day: "31",
-    month: "OCT",
-    monthFull: "October",
+    targetDate: "2026-12-06T12:00:00",
+    dayOfWeek: "SUNDAY",
+    day: "6",
+    month: "DEC",
+    monthFull: "December",
     year: "2026",
-    formattedDate: "Saturday, 31 October 2026",
-    hijriDate: "{ 20 JUMADA AL-AWWAL (JUMADA I) 1448 AH }",
-    timeText: "4:00PM TO 8:30PM",
+    formattedDate: "Sunday, 6 December 2026",
+    timeText: "12:00 PM ONWARDS",
+    ceremonyName: "Walima Ceremony",
     
     // Calendar Event Info
     calendar: {
-      title: "Wedding of Mohammed Nadeer & Fathima Rinsi",
-      description: "Together with their families, Mohammed Nadeer and Fathima Rinsi cordially invite you to celebrate their wedding on Saturday, 31 October 2026 (20 Jumada al-Awwal 1448 AH) at CN Auditorium Kumbidi from 4:00 PM to 8:30 PM.",
-      location: "CN Auditorium, Old Anakkara Road, Kumbidi, Palakkad – 679553, Kerala",
-      startIso: "20261031T160000",
-      endIso: "20261031T203000"
+      title: "Walima Ceremony | Dr. Mahshook & Dr. Dilna",
+      description: "Mr. Azeez & Mrs. Thahira Azeez cordially invite you to the Walima ceremony of their son Dr. Mahshook Bin Azeez with Dr. Dilna Nasrin on Sunday, 6th December 2026 at The White Oak Castle, Moodal from 12:00 PM onwards.",
+      location: "The White Oak Castle Convention Centre, Moodal, Malappuram, Kerala - 679571",
+      startIso: "20261206T120000",
+      endIso: "20261206T163000"
     }
   },
 
-  // Venue & Location
+  // Venue & Location Details
   venue: {
-    name: "CN Auditorium Kumbidi",
-    subLocation: "Old Anakkara Road, Kumbidi",
-    city: "Palakkad",
+    name: "The White Oak Castle Moodal",
+    subLocation: "Kanjippura-Moodal Bypass Road, Markaz Moodal",
+    city: "Athavanad, Kuttippuram",
+    district: "Malappuram",
     state: "Kerala",
-    pincode: "679553",
-    fullAddress: "CN Auditorium (See Yen Auditorium), Old Anakkara Road, Kumbidi, Palakkad – 679553, Kerala",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=See+Yen+Auditorium+Kumbidi+Palakkad",
-    appleMapsUrl: "https://maps.apple.com/?q=CN+Auditorium+Kumbidi"
+    pincode: "679571",
+    fullAddress: "The White Oak Castle Convention Centre, Kanjippura-Moodal Bypass Road, near Oakland Sports Arena, Markaz Moodal, Athavanad, Kuttippuram, Malappuram District, Kerala - 679571",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=White+Oak+Castle+Convention+Centre+Moodal+Kerala",
+    appleMapsUrl: "https://maps.apple.com/?q=White+Oak+Castle+Convention+Centre+Moodal+Kerala"
   },
 
-  // Invitation Messages from the Card
+  // Audio Music Settings
+  audio: {
+    src: "assets/audio/o_rangrez.mp3",
+    title: "O Rangrez (Mughal & Sufi Romance)",
+    defaultVolume: 0.75
+  },
+
+  // Messages from the Invitation Card
   messages: {
     bismillah: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-    monogramText: "N/R",
-    introLine: "TOGETHER WITH THEIR FAMILIES",
-    groomName: "MOHAMMED NADEER",
-    groomParents: "S/O MR. MOHAMMED BASHEER & MRS. SHAHANAZ",
-    groomGrandParents: "GRAND S/O LATE HAMZA HAJI & LATE ABDUL KADER",
-    groomResidence: "PULAPARAMBIL (H), CHEKANOOR, MALAPPURAM",
-    andText: "and",
-    brideName: "FATHIMA RINSI",
-    brideParents: "D/O MR. SUBAIR & MRS. SOUBANATH SUBAIR",
-    brideResidence: "CHANDAPARAMBIL (H), EDAPPAL",
-    invocationText: "In sha allah on",
-    dayOfWeek: "SATURDAY",
-    day: "31",
-    month: "OCTOBER",
-    year: "2026",
-    hijriDate: "{ 20 JUMADA AL-AWWAL (JUMADA I) 1448 AH }",
-    venueName: "CN AUDITORIUM KUMBIDI",
-    timingText: "4:00PM TO 8:30PM",
+    quranArabic: "وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةًۭ وَرَحْمَةً",
+    quranEnglish: "And of His signs is that He created for you mates from yourselves, that you may find tranquility in them; and He placed between you affection and mercy.",
+    quranSurah: "Surah Ar-Rum 30:21",
+    prayer: "May Allah accept our union and make it a source of endless blessings for us all.",
+    sharingHappiness: "Sharing the happiness Mishal & Minha",
     wishesLead: "With best Wishes :",
-    wishesNames: "Pulaparambil & Chandaparambil Families"
+    wishesNames: "Kanhirangattl & Eechiyil Families"
   },
 
-  // Events Timeline
+  // Photos Gallery (Taj Mahal Photoshoot - 6 Photos)
+  gallery: [
+    {
+      id: 1,
+      src: "assets/images/tajmahal/photo1_hero_flowing.jpg",
+      title: "Eternal Symphony",
+      caption: "Dr. Mahshook & Dr. Dilna standing in grace before the majestic Taj Mahal as Dilna's white dress flows like a dream in the Agra breeze.",
+      aspect: "landscape"
+    },
+    {
+      id: 2,
+      src: "assets/images/tajmahal/photo2_forehead_kiss.jpg",
+      title: "A Sacred Vow",
+      caption: "A tender forehead kiss beside the tranquil lotus pool of the Taj Mahal, sealed with pure love and devotion.",
+      aspect: "landscape"
+    },
+    {
+      id: 3,
+      src: "assets/images/tajmahal/photo3_pavilion_sunset.jpg",
+      title: "Sunset Whispers",
+      caption: "Framed under the iconic red sandstone scalloped arches of the Mughal pavilion overlooking the Yamuna river at golden hour.",
+      aspect: "landscape"
+    },
+    {
+      id: 4,
+      src: "assets/images/tajmahal/photo4_bride_serenade.jpg",
+      title: "Golden Hour Serenity",
+      caption: "Dr. Dilna seated peacefully amidst the warm amber glow of sunset, watching the evening sun descend beside the Taj Mahal.",
+      aspect: "landscape"
+    },
+    {
+      id: 5,
+      src: "assets/images/tajmahal/photo5_sunset_silhouette.jpg",
+      title: "Twilight Embrace",
+      caption: "An intimate silhouette of the couple softly outlined against the setting sun and shimmering reflection over the Yamuna.",
+      aspect: "portrait"
+    },
+    {
+      id: 6,
+      src: "assets/images/tajmahal/photo6_twirl_joy.jpg",
+      title: "A Whirl of Joy",
+      caption: "Pure joy captured as Dr. Dilna twirls gracefully in her cascading gown with Dr. Mahshook smiling warmly beside her.",
+      aspect: "landscape"
+    }
+  ],
+
+  // Events Timeline for the Walima Celebration
   events: [
     {
       step: "01",
-      title: "Guest Reception & Welcome Gathering",
-      subtitle: "Festive Welcome & Fellowship",
-      time: "4:00 PM Onwards",
-      badgeText: "Auspicious Welcome",
-      quote: "✦ 20 Jumada al-Awwal 1448 AH ✦",
-      description: "Welcoming beloved family, friends, and esteemed guests to celebrate this blessed union and joyous occasion.",
-      rituals: ["Warm Welcome", "Family Gathering", "Festive Celebrations"],
-      locationName: "CN Auditorium, Kumbidi",
-      mapsUrl: "https://www.google.com/maps/search/?api=1&query=See+Yen+Auditorium+Kumbidi+Palakkad"
+      title: "Guest Reception & Cordial Welcome",
+      subtitle: "Welcoming Family & Friends",
+      time: "12:00 PM Onwards",
+      badgeText: "Welcome Reception",
+      quote: "✦ Sunday, 6 December 2026 • 12:00 PM ✦",
+      description: "Cordially welcoming our cherished family, friends, and esteemed guests to join us in honoring the sacred Walima celebration of Dr. Mahshook & Dr. Dilna.",
+      rituals: ["Cordial Welcome", "Family Fellowship", "Festive Greetings"],
+      locationName: "The White Oak Castle, Moodal",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=White+Oak+Castle+Convention+Centre+Moodal+Kerala"
     },
     {
       step: "02",
-      title: "Wedding Celebrations & Grand Feast",
-      subtitle: "Nikah Blessings & Celebration Dinner",
-      time: "4:00 PM TO 8:30 PM",
+      title: "The Grand Walima Feast",
+      subtitle: "Traditional Malabar Wedding Lunch",
+      time: "12:30 PM Onwards",
       badgeText: "Celebration Feast",
-      quote: "✦ Prayers, Joy & Fellowship ✦",
-      description: "Join us in offering du'a and prayers for the couple, followed by a delicious celebratory dinner and memorable moments with the newlyweds.",
-      rituals: ["Nikah & Du'a", "Celebration Feast", "Meet the Couple"],
-      locationName: "CN Auditorium, Kumbidi",
-      mapsUrl: "https://www.google.com/maps/search/?api=1&query=See+Yen+Auditorium+Kumbidi+Palakkad"
+      quote: "✦ Royal Hospitality & Flavors ✦",
+      description: "Gather with us to savor a sumptuous traditional Malabar wedding feast prepared with love, warmth, and joyous fellowship.",
+      rituals: ["Traditional Walima Lunch", "Celebration Dining", "Shared Happiness"],
+      locationName: "The White Oak Castle, Moodal",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=White+Oak+Castle+Convention+Centre+Moodal+Kerala"
+    },
+    {
+      step: "03",
+      title: "Blessings, Du'a & Photo Moments",
+      subtitle: "Heartfelt Prayers & Felicitations",
+      time: "1:30 PM Onwards",
+      badgeText: "Prayers & Felicitations",
+      quote: "✦ Du'a & Eternal Blessings ✦",
+      description: "Offer your heartfelt du'a and prayers for the newly wedded couple, share your warmest wishes, and capture timeless memories together.",
+      rituals: ["Sincere Du'a", "Meet the Couple", "Timeless Memories"],
+      locationName: "The White Oak Castle, Moodal",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=White+Oak+Castle+Convention+Centre+Moodal+Kerala"
     }
   ]
 };

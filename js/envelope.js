@@ -1,7 +1,7 @@
 /**
  * ===================================================================
- * SACRED GOLDEN THREAD (UNTIE THE KNOT) CONTROLLER
- * Mohammed Nadeer & Fathima Rinsi — October 31, 2026
+ * ROYAL MUGHAL FOLIO & TAJ MAHAL UNVEIL CONTROLLER
+ * Dr. Mahshook Bin Azeez & Dr. Dilna Nasrin — Sunday, 6 December 2026
  * ===================================================================
  */
 
@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const deltaX = (e.clientX - centerX) / (window.innerWidth / 2);
       const deltaY = (e.clientY - centerY) / (window.innerHeight / 2);
 
-      const rotateY = deltaX * 6;
-      const rotateX = -deltaY * 5;
+      const rotateY = deltaX * 5;
+      const rotateX = -deltaY * 4.5;
 
       card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(8px)`;
     });
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── 2. Untie the Knot Animation Sequence ────────────────────── */
+  /* ── 2. Untie the Royal Seal Animation Sequence ───────────── */
   function untieTheThread(e) {
     if (hasUntied) return;
     hasUntied = true;
@@ -68,6 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const cx = window.innerWidth / 2;
     const cy = window.innerHeight * 0.48;
 
+    // Play Background Audio smoothly on user interaction
+    if (window.weddingAudio) {
+      try {
+        window.weddingAudio.play();
+      } catch (err) {
+        console.log("Audio autoplay note:", err);
+      }
+    }
+
     // A. Golden Stardust & Magic Sparkle Flash
     if (window.magicSparkleTrail) {
       window.magicSparkleTrail.burst(cx, cy, 60);
@@ -76,14 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => window.magicSparkleTrail.burst(cx, cy - 40, 40), 360);
     }
 
-    // B. Celebration Flower Petal Cascade
+    // B. Celebration White Jasmine & Rose Petal Cascade
     if (window.petalSystem) {
       setTimeout(() => window.petalSystem.burst(cx, cy, 60), 200);
       setTimeout(() => window.petalSystem.burst(cx - 80, cy, 40), 400);
       setTimeout(() => window.petalSystem.burst(cx + 80, cy, 40), 400);
     }
 
-    // C. Complete Dissolve to Couple Hero & Wedding Card
+    // C. Complete Dissolve to Main Invitation Content
     setTimeout(() => {
       overlay.classList.add('opened');
       document.body.classList.add('envelope-opened');

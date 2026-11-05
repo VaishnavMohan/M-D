@@ -1,6 +1,6 @@
 /* ===================================================================
-   SACRED GOLDEN THREAD (UNTIE THE KNOT) OPENING EXPERIENCE
-   Mohammed Nadeer & Fathima Rinsi — Saturday, October 31, 2026
+   ROYAL MUGHAL FOLIO & TAJ MAHAL OPENING EXPERIENCE
+   Dr. Mahshook Bin Azeez & Dr. Dilna Nasrin — Sunday, 6 December 2026
    =================================================================== */
 
 /* Prevent page scrolling while overlay is active */
@@ -18,7 +18,7 @@ body:not(.envelope-opened) {
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background: radial-gradient(circle at 50% 45%, #152C1F 0%, #0C1A12 55%, #050B08 100%);
+  background: radial-gradient(circle at 50% 45%, #0F2E1E 0%, #081B12 55%, #030A06 100%);
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -44,9 +44,9 @@ body:not(.envelope-opened) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(680px, 95vw);
-  height: min(680px, 95vw);
-  background: radial-gradient(circle, rgba(229, 197, 120, 0.28) 0%, rgba(30, 62, 43, 0.3) 45%, transparent 72%);
+  width: min(720px, 95vw);
+  height: min(720px, 95vw);
+  background: radial-gradient(circle, rgba(229, 197, 120, 0.28) 0%, rgba(15, 46, 30, 0.35) 45%, transparent 72%);
   border-radius: 50%;
   pointer-events: none;
   animation: threadGlowPulse 4.5s infinite alternate ease-in-out;
@@ -57,21 +57,32 @@ body:not(.envelope-opened) {
   100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 
+/* Background Mughal Jali Geometric Screen Pattern */
+#envelope-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 /* ─────────────────────────────────────────────────────────────
-   SACRED WEDDING FOLIO CARD CONTAINER
+   ROYAL MUGHAL FOLIO CARD CONTAINER
    ───────────────────────────────────────────────────────────── */
 .thread-folio-card {
   position: relative;
-  width: min(390px, 90vw);
-  background: #FAF7F2;
-  border-radius: 22px;
-  padding: clamp(26px, 4vh, 36px) clamp(20px, 5vw, 28px) clamp(24px, 3.8vh, 32px);
+  width: min(400px, 92vw);
+  background: #FDFBF7;
+  border-radius: 26px;
+  padding: clamp(26px, 4vh, 38px) clamp(20px, 5vw, 30px) clamp(24px, 3.8vh, 32px);
   text-align: center;
   box-shadow: 
     0 26px 70px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(184, 142, 62, 0.35),
-    0 0 45px rgba(229, 197, 120, 0.22);
-  border: 2.5px solid #2A4D38;
+    0 0 0 1px rgba(197, 160, 89, 0.4),
+    0 0 50px rgba(229, 197, 120, 0.25);
+  border: 2.5px solid #143D28;
   cursor: pointer;
   z-index: 10;
   user-select: none;
@@ -87,7 +98,7 @@ body:not(.envelope-opened) {
   100% { transform: translateY(3px) rotate(-0.4deg); }
 }
 
-/* Gold Inset Frame */
+/* Gold Inset Double Frame */
 .thread-folio-card::before {
   content: '';
   position: absolute;
@@ -95,28 +106,66 @@ body:not(.envelope-opened) {
   left: 7px;
   right: 7px;
   bottom: 7px;
-  border: 1px solid rgba(184, 142, 62, 0.45);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 19px;
+  pointer-events: none;
+}
+
+.thread-folio-card::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 0.8px dashed rgba(197, 160, 89, 0.35);
   border-radius: 15px;
   pointer-events: none;
+}
+
+/* Taj Mahal Dome Finial Motif at Top of Card */
+.folio-dome-crest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.folio-dome-svg {
+  width: 48px;
+  height: 38px;
+  filter: drop-shadow(0 2px 5px rgba(197, 160, 89, 0.35));
 }
 
 /* Corner Botanical Filigree */
 .thread-corner {
   position: absolute;
-  width: clamp(40px, 8vw, 55px);
-  height: clamp(40px, 8vw, 55px);
+  width: clamp(38px, 7vw, 50px);
+  height: clamp(38px, 7vw, 50px);
   pointer-events: none;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .thread-corner-tl {
-  top: 10px;
-  left: 10px;
+  top: 14px;
+  left: 14px;
+}
+
+.thread-corner-tr {
+  top: 14px;
+  right: 14px;
+  transform: scaleX(-1);
+}
+
+.thread-corner-bl {
+  bottom: 14px;
+  left: 14px;
+  transform: scaleY(-1);
 }
 
 .thread-corner-br {
-  bottom: 10px;
-  right: 10px;
+  bottom: 14px;
+  right: 14px;
   transform: rotate(180deg);
 }
 
@@ -124,7 +173,7 @@ body:not(.envelope-opened) {
 .thread-card-header {
   position: relative;
   z-index: 2;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .thread-monogram-wrap {
@@ -133,7 +182,7 @@ body:not(.envelope-opened) {
 
 .thread-monogram-text {
   font-family: var(--font-royal);
-  font-size: clamp(2.2rem, 7vw, 2.9rem);
+  font-size: clamp(2.2rem, 7vw, 2.8rem);
   font-weight: 700;
   letter-spacing: 0.16em;
   color: #8F6E28;
@@ -142,11 +191,13 @@ body:not(.envelope-opened) {
 }
 
 .thread-bismillah {
-  font-size: clamp(1rem, 3.2vw, 1.25rem);
+  font-family: 'Amiri', serif;
+  font-size: clamp(1.05rem, 3.4vw, 1.3rem);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   color: #8F6E28;
   margin: 4px 0 2px;
+  line-height: 1.4;
 }
 
 .thread-invitation-sub {
@@ -155,38 +206,38 @@ body:not(.envelope-opened) {
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #1E3E2B;
+  color: #143D28;
 }
 
 /* Couple Typography */
 .thread-couple-wrap {
   position: relative;
   z-index: 2;
-  margin: 8px 0 14px;
+  margin: 6px 0 12px;
 }
 
 .thread-invite-line {
   font-family: var(--font-serif-classic);
   font-size: clamp(0.92rem, 3.4vw, 1.05rem);
   font-style: italic;
-  color: #4A6354;
+  color: #3B5B47;
   margin-bottom: 2px;
 }
 
 .thread-couple-names {
   font-family: var(--font-royal);
-  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.55rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #1E3E2B;
-  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: #0E2E1D;
+  line-height: 1.25;
   margin: 4px 0;
   text-transform: uppercase;
 }
 
 .thread-couple-and {
   font-family: var(--font-script);
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-size: clamp(1.7rem, 4.8vw, 2.2rem);
   color: #8F6E28;
   display: block;
   line-height: 0.9;
@@ -197,22 +248,32 @@ body:not(.envelope-opened) {
 
 .thread-date-line {
   font-family: var(--font-royal);
-  font-size: clamp(0.68rem, 2.5vw, 0.76rem);
+  font-size: clamp(0.66rem, 2.4vw, 0.74rem);
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   color: #8F6E28;
   text-transform: uppercase;
   margin-top: 6px;
 }
 
+.thread-venue-line {
+  font-family: var(--font-sans);
+  font-size: clamp(0.62rem, 2.2vw, 0.68rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #4D6B58;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
 /* ─────────────────────────────────────────────────────────────
-   THE SACRED GOLDEN THREAD & KNOT WRAP (Interactive)
+   THE ROYAL GOLDEN THREAD BAND & SEAL (Interactive)
    ───────────────────────────────────────────────────────────── */
 .sacred-thread-band {
   position: relative;
-  width: calc(100% + clamp(40px, 10vw, 56px));
-  margin-left: calc(-1 * clamp(20px, 5vw, 28px));
-  height: 38px;
+  width: calc(100% + clamp(40px, 10vw, 60px));
+  margin-left: calc(-1 * clamp(20px, 5vw, 30px));
+  height: 40px;
   margin-top: 14px;
   margin-bottom: 26px;
   display: flex;
@@ -235,14 +296,14 @@ body:not(.envelope-opened) {
   transition: transform 0.6s ease, opacity 0.5s ease;
 }
 
-/* Central Sacred Knot with Bow Loops & Dangling Tassels */
+/* Central Royal Medallion Seal */
 .sacred-knot-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
+  width: 92px;
+  height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,7 +326,7 @@ body:not(.envelope-opened) {
   width: 100%;
   height: 100%;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(184, 142, 62, 0.5));
+  filter: drop-shadow(0 4px 14px rgba(197, 160, 89, 0.55));
 }
 
 /* Pulsing Radiant Halo behind Knot */
@@ -273,7 +334,7 @@ body:not(.envelope-opened) {
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(229, 197, 120, 0.6);
+  border: 1.5px dashed rgba(229, 197, 120, 0.65);
   animation: knotHaloRotate 6s infinite linear;
   pointer-events: none;
 }
@@ -285,7 +346,7 @@ body:not(.envelope-opened) {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   TAP TO UNTIE ACTION BUTTON
+   TAP TO UNVEIL ACTION BUTTON
    ───────────────────────────────────────────────────────────── */
 .thread-action-wrap {
   position: relative;
@@ -298,8 +359,8 @@ body:not(.envelope-opened) {
 }
 
 .thread-untie-btn {
-  background: var(--gold-gradient);
-  color: #122419;
+  background: linear-gradient(135deg, #ECC870 0%, #FFF4D0 35%, #C5A059 75%, #9A7432 100%);
+  color: #0E2818;
   border: none;
   padding: 12px 28px;
   border-radius: var(--radius-full);
@@ -338,7 +399,6 @@ body:not(.envelope-opened) {
 /* ─────────────────────────────────────────────────────────────
    UNTYING ANIMATION CHOREOGRAPHY ON TAP
    ───────────────────────────────────────────────────────────── */
-/* Stage 1: The knot loops unravel and expand */
 #envelope-overlay.opening .sacred-knot-wrap {
   animation: knotUnravel 0.75s forwards cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -349,53 +409,17 @@ body:not(.envelope-opened) {
   100% { transform: translate(-50%, -50%) scale(2.2) rotate(45deg); opacity: 0; filter: blur(6px); }
 }
 
-/* Stage 2: The threads glide away to left and right */
 #envelope-overlay.opening .sacred-thread-line {
-  transform: translateY(-50%) scaleX(1.6);
   opacity: 0;
-  transition: transform 0.65s ease, opacity 0.55s ease;
+  transform: translateY(-50%) scaleX(0);
 }
 
-/* Stage 3: The Folio Card Unfolds and Dissolves */
 #envelope-overlay.opening .thread-folio-card {
-  animation: folioUnfoldZoom 0.95s forwards cubic-bezier(0.16, 1, 0.3, 1) !important;
+  animation: folioUnveil 0.9s forwards cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes folioUnfoldZoom {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  35% {
-    transform: scale(1.06) translateY(-8px);
-    opacity: 1;
-    filter: brightness(1.25);
-  }
-  100% {
-    transform: scale(1.18) translateY(-30px);
-    opacity: 0;
-    filter: blur(10px);
-  }
-}
-
-/* Mobile Optimizations */
-@media (max-width: 480px) {
-  .thread-folio-card {
-    padding: 22px 18px 20px;
-    border-radius: 18px;
-  }
-  .thread-couple-names {
-    font-size: 2.6rem;
-  }
-  .sacred-knot-wrap {
-    width: 78px;
-    height: 78px;
-  }
-  .sacred-thread-band {
-    margin-bottom: 20px;
-  }
-  .thread-untie-btn {
-    padding: 10px 22px;
-    font-size: 0.82rem;
-  }
+@keyframes folioUnveil {
+  0% { transform: scale(1) translateY(0); opacity: 1; }
+  50% { transform: scale(1.05) translateY(-10px); opacity: 0.8; }
+  100% { transform: scale(0.9) translateY(40px); opacity: 0; }
 }

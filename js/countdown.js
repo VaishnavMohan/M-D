@@ -1,8 +1,9 @@
 /**
  * ===================================================================
  * LIVE WEDDING COUNTDOWN & CALENDAR INTEGRATION
- * Mohammed Nadeer & Fathima Rinsi — Saturday, October 31, 2026
- * { 20 Jumada al-Awwal (Jumada I) 1448 AH }
+ * Dr. Mahshook Bin Azeez & Dr. Dilna Nasrin
+ * Walima Ceremony — Sunday, 6 December 2026
+ * The White Oak Castle, Moodal
  * ===================================================================
  */
 
@@ -17,7 +18,7 @@ class WeddingCountdown {
     this.icalBtn = document.getElementById('add-ical');
 
     this.config = (window.WEDDING_CONFIG && window.WEDDING_CONFIG.event) ? window.WEDDING_CONFIG.event : {
-      targetDate: "2026-10-31T16:00:00"
+      targetDate: "2026-12-06T12:00:00"
     };
 
     this.targetTime = new Date(this.config.targetDate).getTime();
@@ -71,10 +72,10 @@ class WeddingCountdown {
 
   openGoogleCalendar() {
     const cal = this.config.calendar || {};
-    const title = encodeURIComponent(cal.title || "Wedding of Mohammed Nadeer & Fathima Rinsi");
-    const details = encodeURIComponent(cal.description || "Together with their families, Mohammed Nadeer and Fathima Rinsi cordially invite you to celebrate their wedding on Saturday, 31 October 2026 (20 Jumada al-Awwal 1448 AH) at CN Auditorium Kumbidi from 4:00 PM to 8:30 PM.");
-    const location = encodeURIComponent(cal.location || "CN Auditorium, Old Anakkara Road, Kumbidi, Palakkad – 679553, Kerala");
-    const dates = `${cal.startIso || '20261031T160000'}/${cal.endIso || '20261031T203000'}`;
+    const title = encodeURIComponent(cal.title || "Walima Ceremony | Dr. Mahshook & Dr. Dilna");
+    const details = encodeURIComponent(cal.description || "Mr. Azeez & Mrs. Thahira Azeez cordially invite you to the Walima ceremony of their son Dr. Mahshook Bin Azeez with Dr. Dilna Nasrin on Sunday, 6th December 2026 at The White Oak Castle, Moodal from 12:00 PM onwards.");
+    const location = encodeURIComponent(cal.location || "The White Oak Castle Convention Centre, Moodal, Malappuram, Kerala - 679571");
+    const dates = `${cal.startIso || '20261206T120000'}/${cal.endIso || '20261206T163000'}`;
 
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${dates}&ctz=Asia/Kolkata`;
     window.open(url, '_blank');
@@ -82,22 +83,22 @@ class WeddingCountdown {
 
   downloadICal() {
     const cal = this.config.calendar || {};
-    const title = cal.title || "Wedding of Mohammed Nadeer & Fathima Rinsi";
-    const details = cal.description || "Together with their families, Mohammed Nadeer and Fathima Rinsi cordially invite you to celebrate their wedding on Saturday, 31 October 2026 (20 Jumada al-Awwal 1448 AH) at CN Auditorium Kumbidi from 4:00 PM to 8:30 PM.";
-    const location = cal.location || "CN Auditorium, Old Anakkara Road, Kumbidi, Palakkad – 679553, Kerala";
+    const title = cal.title || "Walima Ceremony | Dr. Mahshook & Dr. Dilna";
+    const details = cal.description || "Mr. Azeez & Mrs. Thahira Azeez cordially invite you to the Walima ceremony of their son Dr. Mahshook Bin Azeez with Dr. Dilna Nasrin on Sunday, 6th December 2026 at The White Oak Castle, Moodal from 12:00 PM onwards.";
+    const location = cal.location || "The White Oak Castle Convention Centre, Moodal, Malappuram, Kerala - 679571";
 
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Mohammed Nadeer and Fathima Rinsi Wedding//EN',
+      'PRODID:-//Dr Mahshook and Dr Dilna Walima Ceremony//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH',
       'BEGIN:VEVENT',
       'SUMMARY:' + title,
       'DESCRIPTION:' + details,
       'LOCATION:' + location,
-      'DTSTART;TZID=Asia/Kolkata:20261031T160000',
-      'DTEND;TZID=Asia/Kolkata:20261031T203000',
+      'DTSTART;TZID=Asia/Kolkata:20261206T120000',
+      'DTEND;TZID=Asia/Kolkata:20261206T163000',
       'STATUS:CONFIRMED',
       'END:VEVENT',
       'END:VCALENDAR'
@@ -106,7 +107,7 @@ class WeddingCountdown {
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
     const link = document.createElement('a');
     link.href = window.URL.createObjectURL(blob);
-    link.setAttribute('download', 'Nadeer_Rinsi_Wedding.ics');
+    link.setAttribute('download', 'Mahshook_Dilna_Walima.ics');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

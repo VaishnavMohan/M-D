@@ -1,0 +1,401 @@
+/* ===================================================================
+   SACRED GOLDEN THREAD (UNTIE THE KNOT) OPENING EXPERIENCE
+   Mohammed Nadeer & Fathima Rinsi — Saturday, October 31, 2026
+   =================================================================== */
+
+/* Prevent page scrolling while overlay is active */
+body:not(.envelope-opened) {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  touch-action: none;
+  -webkit-overflow-scrolling: auto;
+}
+
+#envelope-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(circle at 50% 45%, #152C1F 0%, #0C1A12 55%, #050B08 100%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  perspective: 1200px;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#envelope-overlay.opened {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: none !important;
+}
+
+/* Ambient Radial Glow */
+.thread-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(680px, 95vw);
+  height: min(680px, 95vw);
+  background: radial-gradient(circle, rgba(229, 197, 120, 0.28) 0%, rgba(30, 62, 43, 0.3) 45%, transparent 72%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: threadGlowPulse 4.5s infinite alternate ease-in-out;
+}
+
+@keyframes threadGlowPulse {
+  0% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SACRED WEDDING FOLIO CARD CONTAINER
+   ───────────────────────────────────────────────────────────── */
+.thread-folio-card {
+  position: relative;
+  width: min(390px, 90vw);
+  background: #FAF7F2;
+  border-radius: 22px;
+  padding: clamp(26px, 4vh, 36px) clamp(20px, 5vw, 28px) clamp(24px, 3.8vh, 32px);
+  text-align: center;
+  box-shadow: 
+    0 26px 70px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(184, 142, 62, 0.35),
+    0 0 45px rgba(229, 197, 120, 0.22);
+  border: 2.5px solid #2A4D38;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  -webkit-user-select: none;
+  animation: folioGentleFloat 5s infinite ease-in-out alternate;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease;
+}
+
+@keyframes folioGentleFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.4deg); }
+  100% { transform: translateY(3px) rotate(-0.4deg); }
+}
+
+/* Gold Inset Frame */
+.thread-folio-card::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  border: 1px solid rgba(184, 142, 62, 0.45);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+/* Corner Botanical Filigree */
+.thread-corner {
+  position: absolute;
+  width: clamp(40px, 8vw, 55px);
+  height: clamp(40px, 8vw, 55px);
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.thread-corner-tl {
+  top: 10px;
+  left: 10px;
+}
+
+.thread-corner-br {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+/* Card Header (Royal Monogram & Invocation) */
+.thread-card-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 8px;
+}
+
+.thread-monogram-wrap {
+  margin: 0 auto 4px;
+}
+
+.thread-monogram-text {
+  font-family: var(--font-royal);
+  font-size: clamp(2.2rem, 7vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #8F6E28;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(143, 110, 40, 0.25);
+}
+
+.thread-bismillah {
+  font-size: clamp(1rem, 3.2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #8F6E28;
+  margin: 4px 0 2px;
+}
+
+.thread-invitation-sub {
+  font-family: var(--font-royal);
+  font-size: clamp(0.66rem, 2.4vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #1E3E2B;
+}
+
+/* Couple Typography */
+.thread-couple-wrap {
+  position: relative;
+  z-index: 2;
+  margin: 8px 0 14px;
+}
+
+.thread-invite-line {
+  font-family: var(--font-serif-classic);
+  font-size: clamp(0.92rem, 3.4vw, 1.05rem);
+  font-style: italic;
+  color: #4A6354;
+  margin-bottom: 2px;
+}
+
+.thread-couple-names {
+  font-family: var(--font-royal);
+  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #1E3E2B;
+  line-height: 1.2;
+  margin: 4px 0;
+  text-transform: uppercase;
+}
+
+.thread-couple-and {
+  font-family: var(--font-script);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  color: #8F6E28;
+  display: block;
+  line-height: 0.9;
+  margin: 1px 0;
+  font-style: italic;
+  text-transform: none;
+}
+
+.thread-date-line {
+  font-family: var(--font-royal);
+  font-size: clamp(0.68rem, 2.5vw, 0.76rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #8F6E28;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THE SACRED GOLDEN THREAD & KNOT WRAP (Interactive)
+   ───────────────────────────────────────────────────────────── */
+.sacred-thread-band {
+  position: relative;
+  width: calc(100% + clamp(40px, 10vw, 56px));
+  margin-left: calc(-1 * clamp(20px, 5vw, 28px));
+  height: 38px;
+  margin-top: 14px;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Horizontal Woven Silk Cord */
+.sacred-thread-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(90deg, #D4AF37 0px, #FFF8D6 4px, #C5A059 8px, #8F6E28 12px);
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.6s ease, opacity 0.5s ease;
+}
+
+/* Central Sacred Knot with Bow Loops & Dangling Tassels */
+.sacred-knot-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 8;
+  animation: knotBreathPulse 2.6s infinite ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes knotBreathPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.08); }
+}
+
+.thread-folio-card:hover .sacred-knot-wrap {
+  transform: translate(-50%, -50%) scale(1.14);
+}
+
+.sacred-knot-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(184, 142, 62, 0.5));
+}
+
+/* Pulsing Radiant Halo behind Knot */
+.sacred-knot-halo {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(229, 197, 120, 0.6);
+  animation: knotHaloRotate 6s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes knotHaloRotate {
+  0% { transform: rotate(0deg) scale(0.95); opacity: 0.5; }
+  50% { transform: rotate(180deg) scale(1.1); opacity: 0.9; }
+  100% { transform: rotate(360deg) scale(0.95); opacity: 0.5; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAP TO UNTIE ACTION BUTTON
+   ───────────────────────────────────────────────────────────── */
+.thread-action-wrap {
+  position: relative;
+  z-index: 6;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.thread-untie-btn {
+  background: var(--gold-gradient);
+  color: #122419;
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: clamp(0.82rem, 3.2vw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(229, 197, 120, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  animation: untieBtnGlow 2.2s infinite ease-in-out;
+}
+
+@keyframes untieBtnGlow {
+  0%, 100% { transform: translateY(0); box-shadow: 0 6px 20px rgba(229, 197, 120, 0.35); }
+  50% { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(229, 197, 120, 0.65); }
+}
+
+.thread-untie-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 34px rgba(229, 197, 120, 0.7);
+}
+
+.thread-hint-text {
+  font-family: var(--font-royal);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8F6E28;
+  opacity: 0.9;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   UNTYING ANIMATION CHOREOGRAPHY ON TAP
+   ───────────────────────────────────────────────────────────── */
+/* Stage 1: The knot loops unravel and expand */
+#envelope-overlay.opening .sacred-knot-wrap {
+  animation: knotUnravel 0.75s forwards cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes knotUnravel {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  40% { transform: translate(-50%, -50%) scale(1.35) rotate(15deg); opacity: 0.9; filter: brightness(1.8); }
+  100% { transform: translate(-50%, -50%) scale(2.2) rotate(45deg); opacity: 0; filter: blur(6px); }
+}
+
+/* Stage 2: The threads glide away to left and right */
+#envelope-overlay.opening .sacred-thread-line {
+  transform: translateY(-50%) scaleX(1.6);
+  opacity: 0;
+  transition: transform 0.65s ease, opacity 0.55s ease;
+}
+
+/* Stage 3: The Folio Card Unfolds and Dissolves */
+#envelope-overlay.opening .thread-folio-card {
+  animation: folioUnfoldZoom 0.95s forwards cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes folioUnfoldZoom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.06) translateY(-8px);
+    opacity: 1;
+    filter: brightness(1.25);
+  }
+  100% {
+    transform: scale(1.18) translateY(-30px);
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .thread-folio-card {
+    padding: 22px 18px 20px;
+    border-radius: 18px;
+  }
+  .thread-couple-names {
+    font-size: 2.6rem;
+  }
+  .sacred-knot-wrap {
+    width: 78px;
+    height: 78px;
+  }
+  .sacred-thread-band {
+    margin-bottom: 20px;
+  }
+  .thread-untie-btn {
+    padding: 10px 22px;
+    font-size: 0.82rem;
+  }
+}
