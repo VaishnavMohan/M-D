@@ -44,8 +44,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=201.0" />
-  <link rel="stylesheet" href="css/envelope.css?v=201.0" />
+  <link rel="stylesheet" href="css/style.css?v=203.0" />
+  <link rel="stylesheet" href="css/envelope.css?v=203.0" />
 </head>
 
 <body>
@@ -182,7 +182,6 @@
     <!-- 1. HERO SPOTLIGHT: COUPLE AT THE TAJ MAHAL -->
     <section class="invitation-card-section hero-spotlight-card reveal-on-scroll is-revealed">
       <div class="hero-image-wrap">
-        <div class="hero-arch-crest">✦ The Monument of Eternal Love ✦</div>
         <img src="assets/images/tajmahal/photo1_hero_flowing.jpg" alt="Mahshook &amp; Dilna at the Taj Mahal" class="hero-couple-img" />
         <div class="hero-image-overlay"></div>
       </div>
@@ -196,7 +195,7 @@
     </section>
 
     <!-- 2. FORMAL DIGITAL INVITATION LETTER CARD (FAITHFUL RECREATION) -->
-    <section class="invitation-card-section reveal-on-scroll">
+    <section class="invitation-card-section formal-letter-section reveal-on-scroll">
       <div class="invitation-letter-card">
 
         <!-- Arched Emerald Header with Hanging Lanterns -->
@@ -270,7 +269,7 @@
           <!-- 3-Column Luxury Badges Grid -->
           <div class="card-tri-badge-grid">
             <!-- Date Badge -->
-            <div class="card-badge-col">
+            <div class="card-badge-col card-badge-date">
               <div class="badge-icon-wrap">📅</div>
               <div class="badge-tag-text">SUNDAY</div>
               <div class="badge-main-text">6</div>
@@ -278,7 +277,7 @@
             </div>
 
             <!-- Time Badge -->
-            <div class="card-badge-col">
+            <div class="card-badge-col card-badge-time">
               <div class="badge-icon-wrap">⏰</div>
               <div class="badge-tag-text">AT</div>
               <div class="badge-main-text">12.00 pm</div>
@@ -286,10 +285,10 @@
             </div>
 
             <!-- Venue Badge -->
-            <div class="card-badge-col">
+            <div class="card-badge-col card-badge-venue">
               <div class="badge-icon-wrap">📍</div>
               <div class="badge-tag-text">THE VENUE</div>
-              <div class="badge-main-text" style="font-size: 0.95rem;">THE WHITE OAK CASTLE</div>
+              <div class="badge-main-text">THE WHITE OAK CASTLE</div>
               <div class="badge-sub-text">MOODAL</div>
             </div>
           </div>
@@ -557,6 +556,13 @@
       <p style="font-size: 0.88rem; color: var(--gold-dark); font-weight: 600; margin-top: 4px;">Sharing the happiness: Mishal &amp; Minha</p>
       <div class="footer-hashtag" style="margin-top: 10px;">#MahshookWedsDilna • December 6, 2026</div>
 
+      <!-- Dedicated WhatsApp Share Button in Footer -->
+      <div class="footer-share-wrap">
+        <button id="share-whatsapp-btn" class="btn-luxury btn-forest btn-share-full" type="button">
+          <span>💬</span> Share Invitation on WhatsApp
+        </button>
+      </div>
+
       <!-- Developer Signature -->
       <div class="footer-signature">
         <span>Created with ❤️ by </span>
@@ -569,41 +575,16 @@
   </main>
 
   <!-- ===================================================================
-       FLOATING ACTION CONTROLS BAR
+       DISCREET FLOATING MUSIC TOGGLE (CORNER ONLY - NO OVERLAP)
        =================================================================== -->
-  <div class="floating-controls-bar" role="toolbar" aria-label="Quick Controls">
-    <!-- Music Toggle with Animated Equalizer Bars -->
-    <button id="music-toggle-btn" class="floating-btn music-toggle-btn" aria-label="Play / Pause Music" title="Play Music">
-      <div class="music-equalizer">
-        <span class="eq-bar"></span>
-        <span class="eq-bar"></span>
-        <span class="eq-bar"></span>
-        <span class="eq-bar"></span>
-      </div>
-    </button>
-
-    <!-- Falling Petals Toggle (🌸) -->
-    <button id="petals-toggle-btn" class="floating-btn" aria-label="Toggle Falling Petals" title="Toggle Falling Petals">
-      🌸
-    </button>
-
-    <!-- Theme Switcher (☀️ / 🌙) -->
-    <button id="theme-toggle-btn" class="floating-btn" aria-label="Toggle Royal Theme" title="Toggle Theme">
-      <span id="theme-toggle-icon">🌙</span>
-    </button>
-
-    <!-- Share on WhatsApp -->
-    <button id="share-whatsapp-btn" class="floating-btn" aria-label="Share on WhatsApp" title="Share Invitation">
-      <svg viewBox="0 0 24 24">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.45 1.002 1.488 1.621.365.217.671.306.908.38.238.075.454.065.626.04.19-.028.604-.247.69-.485.086-.239.086-.444.06-.487-.026-.044-.1-.07-.213-.127z"/>
-      </svg>
-    </button>
-
-    <!-- Scroll to Top -->
-    <button id="scroll-top-btn" class="floating-btn" aria-label="Scroll to Top" title="Top">
-      ↑
-    </button>
-  </div>
+  <button id="music-toggle-btn" class="floating-music-btn" aria-label="Play / Pause Background Music" title="Play / Pause Music">
+    <div class="music-equalizer">
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+    </div>
+  </button>
 
   <!-- Toast Notice Container -->
   <div class="toast-notice" role="alert"></div>

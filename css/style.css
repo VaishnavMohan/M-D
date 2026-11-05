@@ -363,6 +363,13 @@ html[data-theme="dark"] .section-headline {
    FORMAL DIGITAL INVITATION LETTER CARD (EXACT REPLICA DESIGN)
    Emerald Arched Top, Dual Lanterns & Cream Parchment Body
    ───────────────────────────────────────────────────────────── */
+.invitation-card-section.formal-letter-section {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 .invitation-letter-card {
   position: relative;
   background: #FCF9F3;
@@ -518,6 +525,40 @@ html[data-theme="dark"] .card-cordial-lead {
   text-shadow: 0 1px 3px rgba(143, 110, 40, 0.15);
 }
 
+@media (max-width: 580px) {
+  .invitation-letter-card {
+    border-radius: 20px;
+  }
+
+  .card-arch-header {
+    padding: 30px 38px 22px;
+  }
+
+  .card-lantern {
+    width: 28px;
+    height: 70px;
+    top: -2px;
+  }
+
+  .card-lantern-left {
+    left: 8px;
+  }
+
+  .card-lantern-right {
+    right: 8px;
+  }
+
+  .card-body-inner {
+    padding: 22px 12px 18px;
+  }
+
+  .card-couples-title {
+    font-size: clamp(1.48rem, 5.2vw, 2.15rem);
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+}
+
 .card-couples-title .card-cap-initial {
   font-size: 1.08em;
   display: inline-block;
@@ -577,33 +618,51 @@ html[data-theme="dark"] .card-couples-subdetail {
 
 @media (max-width: 580px) {
   .card-tri-badge-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
     margin: 18px auto 12px;
   }
 
+  .card-badge-date {
+    grid-column: 1 / 2;
+  }
+
+  .card-badge-time {
+    grid-column: 2 / 3;
+  }
+
+  .card-badge-venue {
+    grid-column: 1 / -1; /* Spans full width on mobile - NO CLIPPING! */
+    padding: 12px 14px;
+  }
+
   .card-badge-col {
-    padding: 10px 4px;
+    padding: 12px 6px;
     border-radius: var(--radius-sm);
   }
 
   .badge-icon-wrap {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     margin-bottom: 3px;
   }
 
   .badge-tag-text {
-    font-size: 0.58rem;
-    letter-spacing: 0.08em;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
   }
 
   .badge-main-text {
-    font-size: clamp(0.85rem, 3.2vw, 1rem);
+    font-size: clamp(0.92rem, 3.4vw, 1.05rem);
+  }
+
+  .card-badge-venue .badge-main-text {
+    font-size: clamp(0.9rem, 3.5vw, 1.02rem);
+    white-space: normal;
   }
 
   .badge-sub-text {
-    font-size: 0.62rem;
-    letter-spacing: 0.03em;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -1638,64 +1697,61 @@ html[data-theme="dark"] .footer-signature a {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   FLOATING ACTION CONTROLS BAR
+   DISCREET FLOATING MUSIC TOGGLE (CORNER ONLY - NO OVERLAP)
    ───────────────────────────────────────────────────────────── */
-.floating-controls-bar {
+.floating-music-btn,
+.music-toggle-btn {
   position: fixed;
-  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
   right: calc(16px + env(safe-area-inset-right, 0px));
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 990;
-  background: rgba(14, 38, 25, 0.88);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  background: rgba(14, 38, 25, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 8px 12px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--gold-primary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.floating-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5), 0 0 14px rgba(197, 160, 89, 0.25);
   cursor: pointer;
+  z-index: 990;
   transition: var(--transition-smooth);
 }
 
-.floating-btn:hover {
-  background: var(--gold-gradient);
-  color: #0E2818;
-  transform: translateY(-2px) scale(1.08);
+.floating-music-btn:hover,
+.music-toggle-btn:hover {
+  transform: scale(1.08);
+  border-color: #FFF;
 }
 
-.floating-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+.floating-music-btn.is-playing,
+.music-toggle-btn.is-playing {
+  border-color: var(--gold-light);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 20px rgba(229, 197, 120, 0.45);
 }
 
-#scroll-top-btn {
-  display: none;
-}
-
-#scroll-top-btn.visible {
+.footer-share-wrap {
+  margin: 22px auto 14px;
+  text-align: center;
   display: flex;
+  justify-content: center;
 }
 
-/* Music Equalizer Bars on Floating Button */
-.music-toggle-btn {
-  position: relative;
-  overflow: hidden;
+.btn-share-full {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  width: 100%;
+  max-width: 330px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 18px rgba(18, 59, 38, 0.25);
 }
 
 .music-equalizer {
